@@ -1021,8 +1021,11 @@ window.onload = function () {
         var size = window.innerWidth;
         if(size <= 450)
         {
+            var k;
             var ctx1 = document.getElementById('myCanvas1').getContext('2d');
-            ctx1.canvas.width = window.innerWidth;
+            k=window.innerWidth;
+            k=k-30;
+            ctx1.canvas.width = k;
 
             var count = 0;
             var displayAxis = 0;

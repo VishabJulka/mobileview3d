@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <style>
         .button1 {
@@ -90,6 +92,27 @@
             padding: 20px;
             width: 100%;
         }
+
+        .buttonMobile{
+            display:inline-block;
+            padding:0.4em 0.8em;
+            margin:0 0.2em 0.2em 0;
+            border-radius:0.10em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-family:'Roboto',sans-serif;
+            text-transform:uppercase;
+            font-weight:400;
+            color:#FFFFFF;
+            background-color:#3369ff;
+            box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+            text-align:center;
+            position:relative;
+        }
+
+        .buttonMobile:active{
+            top:0.1em;
+        }
     </style>
 
     <style>
@@ -145,6 +168,10 @@
             .reorder1{
                 margin-left: 11px;
                 width: 55%;
+            }
+
+            .spacetop{
+                margin-top: 12px;
             }
         }
     </style>
@@ -336,8 +363,74 @@
         </div>
         
         <div class="row">
+
+            <div class="col-12 d-block d-md-none">
+                <div class="card" style="width: 100%;">
+                    <h5 class="card-header bg-primary text-white" >
+                        Keys
+                    </h5>
+                    <div class="card-body" style="padding-top: 10px;padding-bottom: 1px;">
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <h6>Operations</h6>
+                                    <span style="margin-right: 23px;font-weight: 400;font-size: large;">SCC</span>
+                                    <button class="buttonMobile" id="v">V</button>
+                                </div>
+                                <div style="margin-top: 15px;">
+                                    <span style="margin-right: 23px;font-weight: 400;font-size: large;">BCC</span>
+                                    <button class="buttonMobile" id="b">B</button>
+                                </div>
+                                <div style="margin-top: 15px;">
+                                    <span style="margin-right: 23px;font-weight: 400;font-size: large;">FCC</span>
+                                    <button class="buttonMobile" id="f">F</button>
+                                </div>
+                                <div style="margin-top: 15px;">
+                                    <span style="margin-right: 23px;font-weight: 400;font-size: large;">Axis</span>
+                                    <button class="buttonMobile" id="x">X</button>
+                                </div>
+                                
+                            </div>
+                            <div class="col-6">
+
+                                <div>
+                                    <h6 align="center">Motion</h6>
+                                    <span><button class="buttonMobile" id="clockwise"><i class="fa fa-rotate-right" style="font-size:20px"></i></button></span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span><button class="buttonMobile" id="anticlockwise"><i class="fa fa-rotate-left" style="font-size:20px"></i></button></span>
+                                </div>
+                                <div style="margin-top: 25px;">
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span style="margin-left: 4px;"><button class="buttonMobile" id="up"><i class="fa fa-hand-o-up" style="font-size:20px"></i></button></span>
+                                </div>
+                                <div style="margin-top: 8px;">
+                                    <span><button class="buttonMobile" id="left"><i class="fa fa-hand-o-left" style="font-size:20px"></i></button></span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span><button class="buttonMobile" id="right"><i class="fa fa-hand-o-right" style="font-size:20px"></i></button></span>
+                                </div>
+                                <div style="margin-top: 8px;margin-bottom: 5px;">
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span style="margin-left: 4px;"><button class="buttonMobile" id="down"><i class="fa fa-hand-o-down" style="font-size:20px"></i></button></span>
+                                </div>
+
+
+                            </div>    
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
             <div class="col-12 col-md-6" id="wholePage">
-                <div class="card" style="padding-bottom: 0;">
+                <div class="card spacetop" style="padding-bottom: 0;">
                     <p class="card-header bg-primary text-white" style="font-size: 20px;"> <strong> Observation
                             Table for : </strong>
 
@@ -585,7 +678,7 @@
                 </div>
             </div>
 
-
+            
 
 
             <div class="col-12 col-md-6 d-none d-md-block">
